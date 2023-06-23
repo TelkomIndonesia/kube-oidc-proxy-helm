@@ -6,7 +6,6 @@ oidc:
   usernamePrefix: "oidc:"
   groupsPrefix: "oidc:"
   requiredClaims: []
-  # requiredClaims: ["test=yes"]
 
 deployment:
   image:
@@ -22,11 +21,15 @@ deployment:
     limits:
       memory: "128Mi"
       cpu: "500m"
+  existingSecret: null
 
 service:
   type: ClusterIP
   annotations: null
   externalTrafficPolicy: null
+  loadBalancerIP: null
+  ports:
+    https: null
 
 ingress:
   enabled: false

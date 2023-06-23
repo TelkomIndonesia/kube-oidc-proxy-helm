@@ -9,8 +9,8 @@ Kubernetes cluster-admin privileges are needed to install this Helm Chart as it 
 ## Install the Helm Chart
 
 ```shell
-helm repo add spreitzer https://charts.spreitzer.ch
-helm upgrade kube-oidc-proxy spreitzer/kube-oidc-proxy --install --create-namespace --namespace kube-oidc-proxy --values custom_values.yml
+helm repo add kube-oidc-proxy https://telkomindonesia.github.io/helm-kube-oidc-proxy
+helm upgrade kube-oidc-proxy kube-oidc-proxy/kube-oidc-proxy --install --create-namespace --namespace kube-oidc-proxy --values custom_values.yml
 ```
 
 ## Helm Chart Configuration Examples
@@ -95,9 +95,12 @@ users:
 | `deployment.replicas` | The amount of parallel replicas. | `2` |
 | `deployment.strategy` | The strategy to rollout new containers. | `RollingUpdate` |
 | `deployment.resources` | The resource requests and limits. | See [values.yaml](/values.yaml) |
+| `deployment.existingSecret` | Existing secret name for serving HTTPS service, if supplied. | (none) |
 | `service.type` | The Kubernetes service type. | `ClusterIP` |
 | `service.annotations` | The Kubernetes service annotations. | (none) |
 | `service.externalTrafficPolicy` | The Kubernetes service external traffic policy. | (none) |
+| `service.loadBalancerIP` | The Kubernetes service load balancer ip. | (none) |
+| `service.ports.https` | The Kubernetes service port for https. | 443 |
 | `ingress.enabled` | Enable Kubernetes ingress. | `false` |
 | `ingress.annotations` | The Kubernetes ingress annotations. | (none) |
 | `ingress.hosts` | The Kubernetes ingress hosts. | `['api.kubernetes.example.com']` |
@@ -105,13 +108,13 @@ users:
 
 # References
 
-* https://git.spreitzer.ch/helm/kube-oidc-proxy
-* https://github.com/int128/kubelogin
-* https://www.jetstack.io/blog/kube-oidc-proxy/
-* https://github.com/jetstack/kube-oidc-proxy
-* https://github.com/jetstack/kube-oidc-proxy/issues/202#issuecomment-1061826590
-* https://github.com/tremolosecurity/kube-oidc-proxy
-* https://www.tremolosecurity.com/post/updating-kube-oidc-proxy
-* https://github.com/Azure/AKS/issues/2861
-* https://github.com/Azure/AKS/issues/2861#issuecomment-1433382599
-* https://github.com/Azure/AKS/issues/2861#issuecomment-1527557548
+* <https://git.spreitzer.ch/helm/kube-oidc-proxy>
+* <https://github.com/int128/kubelogin>
+* <https://www.jetstack.io/blog/kube-oidc-proxy/>
+* <https://github.com/jetstack/kube-oidc-proxy>
+* <https://github.com/jetstack/kube-oidc-proxy/issues/202#issuecomment-1061826590>
+* <https://github.com/tremolosecurity/kube-oidc-proxy>
+* <https://www.tremolosecurity.com/post/updating-kube-oidc-proxy>
+* <https://github.com/Azure/AKS/issues/2861>
+* <https://github.com/Azure/AKS/issues/2861#issuecomment-1433382599>
+* <https://github.com/Azure/AKS/issues/2861#issuecomment-1527557548>

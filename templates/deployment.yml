@@ -22,7 +22,11 @@ spec:
       volumes:
         - name: kube-oidc-proxy-tls
           secret:
+            {{- if .Values.deployment.existingSecret }}
+            secretName: {{ .Values.deployment.existingSecret | quote }}              
+            {{- else }}
             secretName: "{{ .Release.Name }}-{{ .Chart.Name }}"
+            {{- end }}
             items:
               - key: tls.crt
                 path: cert.pem

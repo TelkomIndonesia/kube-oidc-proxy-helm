@@ -10,6 +10,9 @@ spec:
   {{- if .Values.service.externalTrafficPolicy }}
   externalTrafficPolicy: {{ .Values.service.externalTrafficPolicy | quote }}
   {{- end }}
+  {{- if .Values.service.loadBalancerIP }}
+  loadBalancerIP: {{ .Values.service.loadBalancerIP | quote }}
+  {{- end }}
   selector:
     app: "{{ .Release.Name }}-{{ .Chart.Name }}"
   ports:
@@ -17,5 +20,5 @@ spec:
       port: 8080
       targetPort: metrics
     - name: https
-      port: 443
+      port: {{ .Values.service.ports.https | default 443 }}
       targetPort: https

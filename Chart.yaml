@@ -1,6 +1,6 @@
 apiVersion: v2
 name: kube-oidc-proxy
-version: 1.0.5
+version: 1.1.0
 description: Helm Chart for kube-oidc-proxy
 keywords:
   - kubernetes
@@ -8,12 +8,15 @@ keywords:
   - kube-apiserver
   - authentication
   - impersonation
-home: https://git.spreitzer.ch/helm/kube-oidc-proxy
+home: https://telkomindonesia.github.io/kube-oidc-proxy-helm/
 sources:
-  - https://git.spreitzer.ch/helm/kube-oidc-proxy.git
+  - https://github.com/TelkomIndonesia/kube-oidc-proxy-helm
 maintainers:
-  - name: Sascha Spreitzer
-    email: sascha@spreitzer.ch
-    url: https://github.com/sspreitzer
+  - name: Mustapha Hadzi
+    email: topahadzi@gmail.com
+    url: https://github.com/topahadzi
+  - name: I Putu Ariyasa
+    email: rucciva@gmail.com
+    url: https://github.com/rucciva
 icon: https://kubernetes.io/images/favicon.png
 appVersion: 1.0.3
