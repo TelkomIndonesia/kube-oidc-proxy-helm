@@ -12,6 +12,8 @@ spec:
     metadata:
       labels:
         app: "{{ .Release.Name }}-{{ .Chart.Name }}"
+      annotations:
+        {{ toYaml .Values.deployment.podAnnotations }}
     spec:
       serviceAccountName: "{{ .Release.Name }}-{{ .Chart.Name }}"
       securityContext:

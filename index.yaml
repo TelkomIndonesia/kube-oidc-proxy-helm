@@ -3,7 +3,33 @@ entries:
   kube-oidc-proxy:
   - apiVersion: v2
     appVersion: 1.0.3
-    created: "2023-06-23T10:43:19.645232+07:00"
+    created: "2023-06-27T18:25:31.733344+07:00"
+    description: Helm Chart for kube-oidc-proxy
+    digest: ec17826a3668d487c20f1266542c549d7e86a3190a9eee69369c84fc75f70101
+    home: https://telkomindonesia.github.io/kube-oidc-proxy-helm/
+    icon: https://kubernetes.io/images/favicon.png
+    keywords:
+    - kubernetes
+    - oidc
+    - kube-apiserver
+    - authentication
+    - impersonation
+    maintainers:
+    - email: topahadzi@gmail.com
+      name: Mustapha Hadzi
+      url: https://github.com/topahadzi
+    - email: rucciva@gmail.com
+      name: I Putu Ariyasa
+      url: https://github.com/rucciva
+    name: kube-oidc-proxy
+    sources:
+    - https://github.com/TelkomIndonesia/kube-oidc-proxy-helm
+    urls:
+    - https://telkomindonesia.github.io/kube-oidc-proxy-helm/kube-oidc-proxy-1.2.0.tgz
+    version: 1.2.0
+  - apiVersion: v2
+    appVersion: 1.0.3
+    created: "2023-06-27T18:25:31.732254+07:00"
     description: Helm Chart for kube-oidc-proxy
     digest: 001aadfbcce72c8b26466b1c5e1873f5656444e9e39a95ac41caffc10d3aee80
     home: https://telkomindonesia.github.io/kube-oidc-proxy-helm/
@@ -27,4 +53,4 @@ entries:
     urls:
     - https://telkomindonesia.github.io/kube-oidc-proxy-helm/kube-oidc-proxy-1.1.0.tgz
     version: 1.1.0
-generated: "2023-06-23T10:43:19.634118+07:00"
+generated: "2023-06-27T18:25:31.726928+07:00"
